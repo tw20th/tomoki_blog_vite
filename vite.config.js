@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite'
 import preact from '@preact/preset-vite'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [preact()],
-  base: '/tomoki_blog_vite/', // GitHub Pages用のベースURL（リポジトリ名）
+  base: '/tomoki_blog_vite/', // リポジトリ名を指定
   build: {
-    outDir: 'docs', // 出力フォルダを 'docs' に変更（GitHub Pages用）
+    outDir: 'docs', // GitHub Pages用の出力フォルダ
   },
 })
