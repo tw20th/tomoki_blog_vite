@@ -78,3 +78,70 @@ body {
   margin: 0 auto;
   padding: 2rem;
 }
+
+/* ベーススタイル（デスクトップ） */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* グリッドスタイル */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 自動調整 */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* レスポンシブスタイル */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* タブレット */
+  }
+
+  .card {
+    padding: 0.8rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* スマートフォン */
+  }
+
+  .card {
+    padding: 0.6rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
