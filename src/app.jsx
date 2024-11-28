@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
+import CardGrid from './components/CardGrid';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Pages from './pages/Pages';
-import CardGrid from './components/CardGrid'; // CardGridを直接使うため修正
+import ArticleDetail from './pages/ArticleDetail'; // 詳細ページをインポート
 
 import './app.css';
 
@@ -25,6 +25,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pages" element={<Pages />} />
+        <Route path="/articles/:id" element={<ArticleDetail />} /> {/* 詳細ページのルート */}
       </Routes>
       <Footer />
     </Router>
