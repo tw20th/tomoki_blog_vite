@@ -29,3 +29,52 @@
 .read-the-docs {
   color: #888;
 }
+
+/* カードデザイン */
+.card {
+  padding: 2em;
+  border-radius: 12px; /* カードの角丸 */
+  background-color: #ffffff; /* カード背景 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* カードのシャドウ */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* ホバー時に少し浮く */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* ホバー時の強調シャドウ */
+}
+
+/* 見出し */
+.card h3 {
+  font-size: 1.5rem; /* 見出しサイズ */
+  color: #333333; /* 濃いグレー */
+  margin-bottom: 0.5rem;
+}
+
+/* 本文 */
+.card p {
+  font-size: 1rem; /* 本文サイズ */
+  color: #666666; /* テキスト色 */
+  margin-bottom: 1rem;
+}
+
+/* 日付 */
+.card small {
+  font-size: 0.875rem;
+  color: #888888;
+}
+
+/* 全体の背景色とレイアウト調整 */
+body {
+  font-family: 'Roboto', sans-serif; /* フォント変更 */
+  background-color: #f9f9f9; /* 背景色 */
+  color: #333333; /* テキストの基本色 */
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
