@@ -11,7 +11,7 @@ const CardGrid = ({ searchQuery }) => {
     // JSONファイルからデータを取得
     const fetchArticles = async () => {
       try {
-        const response = await fetch('./src/articles.json'); // JSONファイルのパス
+        const response = await fetch('/articles.json'); // JSONファイルのパス
         if (!response.ok) throw new Error('Failed to fetch articles');
         const data = await response.json();
         setArticles(data);
