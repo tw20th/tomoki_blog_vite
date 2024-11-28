@@ -1,11 +1,13 @@
 import React from 'react';
+import Slider from '../components/Slider';
+import CardGrid from '../components/CardGrid';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to Tomoki's Blog</h1>
-      <p>This is the home page.</p>
-    </div>
+    <main>
+      <Slider />
+      <CardGrid />
+    </main>
   );
 };
 
