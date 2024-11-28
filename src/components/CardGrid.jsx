@@ -1,46 +1,64 @@
+import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const CardGrid = ({ searchQuery }) => {
-    const dummyData = [
-      { id: 1, title: 'Article 1', summary: 'This is the first article.', date: '2024-11-01', tags: ['Tech'] },
-      { id: 2, title: 'Article 2', summary: 'This is the second article.', date: '2024-11-02', tags: ['Life'] },
-      { id: 3, title: 'Article 3', summary: 'This is the third article.', date: '2024-11-03', tags: ['Tech'] },
-    ];
-  
-    const filteredData = dummyData.filter(
-      (item) =>
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.summary.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  
-    return (
-      <div className="card-grid">
-        {filteredData.map((item) => (
-          <div key={item.id} className="card">
-            <h3>{item.title}</h3>
-            <p>{item.summary}</p>
-            <small>{item.date}</small>
-            <div style={{ marginTop: '0.5rem' }}>
-              {item.tags.map((tag) => (
-                <span
-                  key={tag}
-                  style={{
-                    display: 'inline-block',
-                    background: '#e0f7fa',
-                    color: '#00796b',
-                    padding: '0.2rem 0.5rem',
-                    margin: '0 0.2rem',
-                    borderRadius: '4px',
-                    fontSize: '0.875rem',
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+
+    // JSONファイルからデータを取得
+    const fetchArticles = async () => {
+      try {
+        const response = await fetch('./src/articles.json'); // JSONファイルのパス
+        if (!response.ok) throw new Error('Failed to fetch articles');
+        const data = await response.json();
+        setArticles(data);
+      } catch (error) {
+        console.error('Error fetching articles:', error);
+      }
+    };
+
+    fetchArticles();
+  }, []);
+
+  // 検索フィルタ
+  const filteredArticles = articles.filter(
+    (item) =>
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.summary.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  return (
+    <div className="card-grid">
+      {filteredArticles.map((item) => (
+        <div key={item.id} className="card">
+          <h3>{item.title}</h3>
+          <p>{item.summary}</p>
+          <small>{item.date}</small>
+          <div style={{ marginTop: '0.5rem' }}>
+            {item.tags.map((tag) => (
+              <span
+                key={tag}
+                style={{
+                  display: 'inline-block',
+                  background: '#e0f7fa',
+                  color: '#00796b',
+                  padding: '0.2rem 0.5rem',
+                  margin: '0 0.2rem',
+                  borderRadius: '4px',
+                  fontSize: '0.875rem',
+                }}
+              >
+                {tag}
+              </span>
+            ))}
           </div>
-        ))}
-      </div>
-    );
-  };
-  
-  export default CardGrid;
-  
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default CardGrid;

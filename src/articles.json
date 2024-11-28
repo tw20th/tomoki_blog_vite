@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "Understanding React",
+      "summary": "A beginner's guide to React concepts and features.",
+      "date": "2024-11-01",
+      "tags": ["React", "Beginner"]
+    },
+    {
+      "id": 2,
+      "title": "JavaScript Tips and Tricks",
+      "summary": "Boost your JavaScript skills with these tips.",
+      "date": "2024-11-02",
+      "tags": ["JavaScript", "Advanced"]
+    },
+    {
+      "id": 3,
+      "title": "CSS for Modern Web Design",
+      "summary": "Learn about modern CSS techniques and tools.",
+      "date": "2024-11-03",
+      "tags": ["CSS", "Design"]
+    }
+  ]
+  
