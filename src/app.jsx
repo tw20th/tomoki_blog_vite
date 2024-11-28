@@ -7,6 +7,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Pages from './pages/Pages';
 
+// CSSのインポート
+import './app.css'; // 必ず正しいパスを確認してください
+
 const App = () => {
   return (
     <Router>
