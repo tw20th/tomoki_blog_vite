@@ -6,7 +6,7 @@
     "content": "ViteとReactを使用することで、素早く効率的な開発環境を構築できます。本記事では、プロジェクトのセットアップから基本的なコンポーネントの作成、ローカルサーバーの起動方法まで詳しく解説します。",
     "date": "2024-11-01",
     "tags": ["Vite", "React", "初心者"],
-    "image": "https://via.placeholder.com/800x400?text=Vite+and+React"
+    "image": "/images/article1.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "content": "検索バーとタグフィルターを組み合わせることで、ユーザーは簡単に記事を絞り込むことができます。本記事では、Reactの状態管理とJSONデータを活用した動的フィルタリングの仕組みを紹介します。",
     "date": "2024-11-02",
     "tags": ["React", "検索機能", "フィルター"],
-    "image": "https://via.placeholder.com/800x400?text=Search+and+Filter"
+    "image": "/images/article2.jpg"
   },
   {
     "id": 3,
@@ -24,6 +24,6 @@
     "content": "レスポンシブデザインを使用することで、ユーザーのデバイスに応じた最適なレイアウトを提供できます。この記事では、CSSメディアクエリとグリッドシステムを活用したレスポンシブデザインの基礎を解説します。",
     "date": "2024-11-03",
     "tags": ["CSS", "レスポンシブ", "デザイン"],
-    "image": "https://via.placeholder.com/800x400?text=Responsive+Design"
+    "image": "/images/article3.jpg"
   }
 ]
