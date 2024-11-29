@@ -31,5 +31,14 @@
     "category": "Design",
     "featured": false,
     "image": "/images/responsive_design_article.jpg"
+  },
+  {
+    "id": 4,
+    "title": "AIと進めるWebサイト開発の記録",
+    "summary": "ChatGPTを活用したWebサイト開発の過程を記録。AIの力を借りて効率的に学習・開発する方法。",
+    "content": "本ブログでは、ChatGPTを活用して効率的にWebサイト開発を進める方法を紹介しています。ReactとViteを使用したプロジェクトのセットアップから、動的な機能追加、レスポンシブデザインの実装まで、ステップごとにAIのサポートを受けながら進めました。",
+    "date": "2024-11-04",
+    "tags": ["AI", "開発記録", "ChatGPT"],
+    "image": "/images/ai_development_article.jpg"
   }
 ]
